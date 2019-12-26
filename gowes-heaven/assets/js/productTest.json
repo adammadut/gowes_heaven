@@ -1,0 +1,49 @@
+{
+    "product": [
+        {
+            "kategori": "accesories",
+            "nama": "helmet",
+            "gambar": "helmet.jpg"
+        },
+        {
+            "kategori": "accesories",
+            "nama": "bike seat",
+            "gambar": "bikeSeat.jpg"
+        },
+        {
+            "kategori": "accesories",
+            "nama": "handle bar bag",
+            "gambar": "handleBarBag.jpg"
+        },
+        {
+            "kategori": "sparepart",
+            "nama": "paddle",
+            "gambar": "paddle.jpg"
+        },
+        {
+            "kategori": "sparepart",
+            "nama": "gear",
+            "gambar": "gear.jpg"
+        },
+        {
+            "kategori": "sparepart",
+            "nama": "gear set",
+            "gambar": "gearSet.jpg"
+        },
+        {
+            "kategori": "bikeSet",
+            "nama": "doubleSeatBike",
+            "gambar": "doubleSeatBike.jpg"
+        },
+        {
+            "kategori": "bikeSet",
+            "nama": "KarateMonkeyBlue",
+            "gambar": "KarateMonkeyBlue.jpg"
+        },
+        {
+            "kategori": "bikeSet",
+            "nama": "FBStragglerMint",
+            "gambar": "FBStragglerMint.jpg"
+        }
+    ]
+}
