@@ -60,12 +60,6 @@
 <!-- Custom Scripts -->
 <script src="<?= base_url('assets/'); ?>js/script.js"></script>
 <script>
-  Swal.fire({
-    title: 'Error!',
-    text: 'Do you want to continue',
-    icon: 'error',
-    confirmButtonText: 'Cool'
-  })
 </script>
 
 < </body> </html>

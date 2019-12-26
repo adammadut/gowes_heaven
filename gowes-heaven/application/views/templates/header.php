@@ -53,7 +53,7 @@
                 </ul>
               </li>
 
-              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="<?=base_url('home/contact')?>">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
               <li class="nav-item"><a href="#" class="cart"><span class="ti-bag"></span></a></li>

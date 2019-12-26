@@ -53,7 +53,7 @@
 
   <!-- tambah produk -->
   <div class="row ml-1">
-    <a href="#" class="btn btn-primary btn-icon-split" data-toggle="modal" data-target="#exampleModal" data-title="Tambah Produk">
+    <a href="#" class="btn btn-primary btn-icon-split" data-toggle="modal" data-target="#formModal" data-title="Tambah Produk">
       <span class="icon text-white-10">
         <i class="fas fa-plus-square  mt-1"></i>
       </span>
@@ -107,7 +107,7 @@
                   <img src="<?= base_url('assets/img/product/') . $pindex['gambar']; ?>" alt="" style="width: 100px;height: 100px;">
                 </td>
                 <td class="py-5">
-                  <a href="#" class="btn btn-primary btn-circle btn-sm mb-1">
+                  <a href="#" class="btn btn-primary btn-circle btn-sm mb-1" data-toggle="modal" data-target="#formModal" data-title="Edit Produk" data-idproduk="<?= $pindex['id'] ?>" data-nama="<?= $pindex['nama'] ?>" data-kategori="<?= $pindex['kategori'] ?>" data-deskripsi="<?= $pindex['deskripsi'] ?>" data-harga="<?= $pindex['harga'] ?>" data-gambar="<?= $pindex['gambar']; ?>">
                     <i class="fas fa-edit"></i>
                   </a>
                   <a href="#" class="btn btn-danger btn-circle btn-sm">
@@ -133,17 +133,17 @@
 <!-- End of Main Content -->
 
 <!-- start modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <h5 class="modal-title" id="exampleModalLabel">title</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <form method="post" enctype="multipart/form-data" action="<?= base_url() ?>admin/tambah">
+        <form method="post" enctype="multipart/form-data" id="form" action="<?= base_url() ?>admin/tambah">
           <div class="form-group">
             <label for="nama" class="col-form-label"></label>
             <input type="text" class="form-control" id="nama" placeholder="Nama Produk" name="nama" required>
@@ -154,14 +154,14 @@
             </div>
             <select class="form-control" id="kategori" name="kategori" onclick="validasi()">
               <option selected>kategori</option>
-              <option value="1">fullbike</option>
-              <option value="2">sparepart</option>
-              <option value="3">aksesoris</option>
+              <option value="fullbike">fullbike</option>
+              <option value="sparepart">sparepart</option>
+              <option value="aksesoris">aksesoris</option>
             </select>
           </div>
           <div id="inputKategori" class="text-danger ml-1 mt-1" style="display : none">Pilih kategori !</div>
           <div class="input-group">
-            <textarea class="form-control mt-2" required name="deskripsi" placeholder="deskripsi"></textarea>
+            <textarea class="form-control mt-2" required id="deskripsi" name="deskripsi" placeholder="deskripsi"></textarea>
           </div>
           <div class="input-group mt-3">
             <div class="input-group-prepend">
@@ -174,8 +174,11 @@
           <div class="input-group mb-3 mt-3">
             <div class="custom-file">
               <input type="file" class="custom-file-input" id="image" name="image">
-              <label class="custom-file-label" for="image">Choose file</label>
+              <label class="custom-file-label" for="image" id="labelImage">Choose file</label>
             </div>
+          </div>
+          <div id="idparent">
+            <input type="text" id="idproduk" name="id">
           </div>
           <div class="modal-footer">
             <button type="submit" class="btn btn-primary" disabled id="btnSave">Tambah Produk</button>
